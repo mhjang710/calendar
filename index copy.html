@@ -4,32 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendar</title>
-  <!-- Reset CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/less/reset.less">
+  <!-- Google Fonts: Noto Sans and Jua -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Link to CSS file -->
   <link rel="stylesheet" href="style.css">
+  <title>Calendar</title>
 </head>
 <body>
+  <header>
+    <button>KO</button>
+    <button>EN</button>
+  </header>
   <main>
-    <section id="info">
-      <section id="date_info">
-        <article id="date" class="center">
-          <h1><p id="mmdd">2월 27일</p><p id="day">월</p></h1>
-        </article>
-        <article id="time" class="center">
-          <h1>5:00 AM PM</h1>
-        </article>
-        <article id="weather">
-          <h1>5도</h1> ☀️</article>
-        <article id="week" class="center">
-          <h1>8주차</h1>
-        </article>
-      </section>
-      <section id="progress_bar" class="center">
-        <progress max="100" value="10">10%</progress>
-      </section>
+    <section id="today_info">
+      <article id="date">
+        <h1>오늘은</h1>
+        <h2>2023년 2월 16일 목요일</h2>
+        <h1 class="end">입니다.</h1>
+      </article>
+      <article id="time_info">
+        <h1>현재 시간은</h1>
+        <h2>5:00 <div id="time"><span>AM</span><span>PM</span></div></h2>
+        <h1 class="end">입니다.</h1>
+      </article>
     </section>
-    <section id="calendar">
+    <section id="week_and_weather">
+      <article id="this week">
+        <h1>이번 주는 <span id="week">7</span> 번째 주 입니다</h1>
+        <progress max="100" value="10">10%</progress> 10%
+      </article>
+      <article id="weather">
+        ☀️
+      </article>
+    </section>
+    <section id="calendar_table">
       <table>
         <tr id="day_of_the_week">
           <th>월요일</th>
@@ -87,10 +97,10 @@
         </tr>
       </table>
     </section>
+    <div id="sun"></div>
+    <footer>
+      Made by Mino
+    </footer>
   </main>
-  <footer>
-    Made by Mino
-  </footer>
-  <script src="index.js"></script>
 </body>
 </html>
