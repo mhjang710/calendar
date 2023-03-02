@@ -53,6 +53,21 @@ h1 > p {
   font-size: 1.7em;
 }
 
+/* #am-pm-box {
+  display: flex;
+} */
+#time > h1 {
+ display: flex;
+ align-items: center;
+ font-size: 2.5em;
+}
+
+#am-pm-box {
+  font-size: 0.4em;
+  margin-left: 5px;
+}
+
+
 /* Progress bar */
 progress {
   width: 80%;

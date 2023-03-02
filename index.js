@@ -17,3 +17,15 @@ function getDayToday(date) {
 document.getElementById('mmdd').innerHTML = getTodayDate(date);
 document.getElementById('day').innerHTML = getDayToday(date);
 
+// Get the current time
+const hr = date.getHours();
+const min = date.getMinutes();
+
+if (hr >= 12) {
+  document.getElementById('hr').innerHTML = (hr - 12);
+  document.getElementById('am').style.color = "gray"; // 색깔 바꾸기
+} else {
+  document.getElementById('hr').innerHTML = hr;
+  document.getElementById('pm').style.color = "gray";
+}
+
