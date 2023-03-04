@@ -85,3 +85,28 @@ if (date.getMonth() + 1 === 1 && calculateMonthWeekNum(date) === 0) {
 const todayPercentage = Math.round(days / 365 * 100);
 document.getElementById('progress').setAttribute('value', todayPercentage);
 
+// Print Calendar
+function printCalendar(date) {
+  let firstDate = new Date(date.getFullYear(), date.getMonth(), 1);
+  let lastDate = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+  let daysInMonth = lastDate.getDate() - firstDate.getDate() + 1;
+  const daysArr = ["sun", "mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+  let nextDate = firstDate.getDate();
+  let nextDay = firstDate.getDay();
+  let weekNum = 1;
+  
+  console.log(daysInMonth);
+  for (let i = 1; i <= daysInMonth; i++) {
+    let dayNow = daysArr[nextDay];
+    console.log("dayNow: " + dayNow);
+    let selectElement = document.querySelector(`#week${weekNum} > .${dayNow}`);
+    console.log(selectElement);
+    selectElement.innerHTML = i;
+    if (nextDay === 6) {
+      weekNum++;
+    }
+    nextDay = (nextDay + 1) % 7;
+  }
+}
+
+printCalendar(date);
