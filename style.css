@@ -1,11 +1,11 @@
 /* Should be erased at the end!!! */
-* {
+/* * {
   border: 1px dotted gray;
 }
 
 #info, #calendar {
   border: 1px solid red;
-}
+} */
 
 /* Universal */
 body {
@@ -21,6 +21,29 @@ body {
 
 /* Date Information Part */
 
+#th_sun::before {
+  content: "일요일";
+}
+#th_mon::before {
+  content: "월요일";
+}
+#th_tue::before {
+  content: "화요일";
+}
+#th_wed::before {
+  content: "수요일";
+}
+#th_thu::before {
+  content: "목요일";
+}
+#th_fri::before {
+  content: "금요일";
+}
+#th_sat::before {
+  content: "토요일";
+}
+
+
 #date_info {
   display: flex;
   justify-content: space-evenly;
@@ -30,7 +53,7 @@ body {
 #date_info > article {
   width: 150px;
   height: 150px;
-  border: 4px solid #0D0D0D;
+  border: 8px solid #0D0D0D;
   border-radius: 8px;
 }
 
@@ -175,8 +198,19 @@ tr > td {
 footer {
   background-color: #0D0D0D;
   color: #A6A6A6;
-  font-size: 0.7em;
+  font-size: 0.8em;
   text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+#github_icon {
+  right: 10px;
+  width: 20px;
+  margin: 10px;
 }
 
 /* #sun {
@@ -186,3 +220,45 @@ footer {
   background-image: radial-gradient(#F29F05, #F2B705, #F2E205);
   box-shadow: 0 0 25px 30px #F2D98D;
 } */
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Cell phone */
+@media screen and (max-width: 767px) {
+  #date_info > article {
+    width: 100px;
+    height: 100px;
+    border: 4px solid #0D0D0D;
+    border-radius: 8px;
+  }
+
+  #th_sun::before {
+    content: "일";
+  }
+  #th_mon::before {
+    content: "월";
+  }
+  #th_tue::before {
+    content: "화";
+  }
+  #th_wed::before {
+    content: "수";
+  }
+  #th_thu::before {
+    content: "목";
+  }
+  #th_fri::before {
+    content: "금";
+  }
+  #th_sat::before {
+    content: "토";
+  }
+}
