@@ -243,6 +243,12 @@ footer {
 
 /* Cell phone */
 @media screen and (max-width: 767px) {
+  #date_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   #date_info > article {
     width: 100px;
     height: 100px;
@@ -272,17 +278,52 @@ footer {
     content: "토";
   }
 
-  article > h1 {
-    font-family: 'Jua', sans-serif;
-    font-size: 15px;
-  }
-
   #mmdd {
-    margin-bottom: 10px;
-    font-size: 1.2em;
+    font-size: 1em;
+    margin: 8px;
   }
   
+  #date {
+    font-size: 1.8em;
+  }
+
   #time > h1 {
    font-size: 2em;
+  }
+
+  #weather > h1 {
+    font-size: 3em;
+  }
+  #temp-box > h2 {
+    font-size: 0.9em;
+  }
+  #temp-box {
+    margin: 0;
+  }
+
+  #week > h1 {
+    font-size: 1.8em;
+  }
+  
+  #week > h2 {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  table {
+    height: 15em;
+  }
+
+  tr > td {
+    font-size: 0.5em;
+  }
+
+  footer {
+    font-size: 0.5em;
+    height: 30px;
+  }
+  
+  #github_icon {
+    width: 15px;
   }
 }
