@@ -11,25 +11,23 @@
 </head>
 <body>
   <main>
-    <section id="info">
-      <section id="date_info">
-        <article id="date" class="center">
-          <h1><p id="mmdd">3월 1일</p><p id="day">토</p></h1>
-        </article>
-        <article id="time" class="center">
-          <h1><span id="hr">9</span><span class="blink">:</span><span id="min">13</span><div id="am-pm-box"><div id="am">AM</div><div id="pm">PM</div></div></h1>
-        </article>
-        <article id="weather">
-          <h1>☀️</h1><div id="temp-box"><h2 id="low_temp">3℃</h2> / <h2 id="high_temp">9℃</h2></div>
-        </article>
-        <article id="week">
-          <h1><span id="week_num">9</span>주차</h1>
-          <h2><span id="month_week">2</span>월 <span id="month_week_num">4</span>째 주</h2>
-        </article>
+    <div class="info-wrapper">
+      <section class="date">
+        <p>3월 1일</p><p>토</p>
       </section>
-      <section id="progress_bar" class="center">
-        <progress id="progress" max="100" value="16"></progress>
+      <section id="time" class="center">
+        <h2><span id="hr">9</span><span class="blink">:</span><span id="min">13</span><div id="am-pm-box"><div id="am">AM</div><div id="pm">PM</div></div></h2>
       </section>
+      <section id="weather">
+        <h1>☀️</h1><div id="temp-box"><h2 id="low_temp">3℃</h2> / <h2 id="high_temp">9℃</h2></div>
+      </section>
+      <section id="week">
+        <h1><span id="week_num">9</span>주차</h1>
+        <h2><span id="month_week">2</span>월 <span id="month_week_num">4</span>째 주</h2>
+      </section>
+    </div>
+    <section id="progress_bar" class="center">
+      <progress id="progress" max="100" value="16"></progress>
     </section>
     <section id="calendar" class="center">
       <table>
@@ -96,7 +94,7 @@
   </main>
   <footer class="center">
     Made by Mino
-    <a href="https://github.com/mhjang710"><img src="./images/github-mark-white.png" alt="github icon" id="github_icon"></a>
+    <a href="https://github.com/mhjang710" target="_blank"><img src="./images/github-mark-white.png" alt="github icon" id="github_icon"></a>
   </footer>
   <script src="index.js"></script>
 </body>

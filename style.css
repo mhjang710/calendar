@@ -1,26 +1,34 @@
-/* Should be erased at the end!!! */
-/* * {
-  border: 1px dotted gray;
+/* Basic Settings */
+
+:root {
+  --black: #0d0d0d;
 }
 
-#info, #calendar {
-  border: 1px solid red;
-} */
-
-/* Universal */
 html {
   box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  color: var(--black);
 }
 
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
-  height: 100%;
+  margin: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 .center {
@@ -34,7 +42,22 @@ body {
   animation: blink-effect 1s step-end infinite;
 }
 
-/* Date Information Part */
+/* Information Box */
+
+.info-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.date {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  border: 1px black solid;
+}
 
 #th_sun::before {
   content: "일요일";
@@ -58,17 +81,16 @@ body {
   content: "토요일";
 }
 
-
 #date_info {
   display: flex;
   justify-content: space-evenly;
-  margin: 50px;
+  /* margin: 50px; */
 }
 
 #date_info > article {
   width: 150px;
   height: 150px;
-  border: 8px solid #0D0D0D;
+  border: 8px solid var(--black);
   border-radius: 8px;
 }
 
@@ -76,10 +98,6 @@ article > h1 {
   font-family: 'Jua', sans-serif;
   font-size: 20px;
   text-align: center;
-}
-
-h1 > p {
-  margin: 0;
 }
 
 #mmdd {
