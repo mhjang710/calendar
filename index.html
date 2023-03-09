@@ -13,17 +13,19 @@
   <main>
     <div class="info-wrapper">
       <section class="date">
-        <p>3월 1일</p><p>토</p>
+        <p class="month-day__date">3월 1일</p><p class="day__date">토</p>
       </section>
-      <section id="time" class="center">
-        <h2><span id="hr">9</span><span class="blink">:</span><span id="min">13</span><div id="am-pm-box"><div id="am">AM</div><div id="pm">PM</div></div></h2>
+      <section class="time">
+        <p class="hour">9</p><span class="blink">:</span><p class="minutes">13</p>
+        <p class="am-pm"><span class="am hide">AM</span><span class="pm">PM</span></p>
       </section>
-      <section id="weather">
-        <h1>☀️</h1><div id="temp-box"><h2 id="low_temp">3℃</h2> / <h2 id="high_temp">9℃</h2></div>
+      <section class="weather">
+        <p class="temp-icon">☀️</p>
+        <p class="temp"><span class="low-temp">3℃</span> / <span class="high-temp">9℃</span></p>
       </section>
-      <section id="week">
-        <h1><span id="week_num">9</span>주차</h1>
-        <h2><span id="month_week">2</span>월 <span id="month_week_num">4</span>째 주</h2>
+      <section class="week">
+        <p class="month__week"><span class="month__month-week">2</span>월 <span class="month-num__month-week">4</span>째 주</p>
+        <p class="total-week">9<span>주차</span></p>
       </section>
     </div>
     <section id="progress_bar" class="center">

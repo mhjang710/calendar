@@ -31,10 +31,14 @@ p {
   margin: 0;
 }
 
-.center {
+/* .center {
   display: flex;
   justify-content: center;;
   align-items: center;
+} */
+
+.hide {
+  display: none;
 }
 
 @keyframes blink-effect { 50% {opacity: 0;}}
@@ -46,19 +50,79 @@ p {
 
 .info-wrapper {
   display: grid;
+  grid-gap: 20px;
   grid-auto-flow: column;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-between;
+  width: 100%;
+  font-family: 'Jua', sans-serif;
+  text-align: center;
+  font-size: 2em;
 }
+
+.info-wrapper section {
+  border: 5px solid black;
+  border-radius: 15px;
+  position: relative;
+  width: 100%;
+  font-weight: 900;
+  display: grid;
+  place-items: center; /* justify-items: center; align-items: center; */
+  padding: 15px;
+}
+
+/* Date Box */
 
 .date {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  justify-items: center;
-  align-items: center;
-  border: 1px black solid;
+  /* grid-template-columns: 1fr; */
+  /* grid-template-rows: repeat(auto-fit, 1fr); */
 }
 
+.month-day__date {
+  font-size: 2em;
+  padding: 15px;
+}
+
+.day__date {
+  font-size: 3.5em;
+}
+
+/* Time Box */
+.time {
+  grid-auto-flow: column;
+  place-items: center;
+  font-size: 2em;
+}
+
+/* TODO: display AM or PM using .hide */
+
+/* Weather Box */
+.weather {
+  grid-template-rows: 2fr 1fr;
+}
+
+.temp-icon {
+  font-size: 4em;
+}
+
+.temp {
+  font-size: 1.5em;
+}
+
+/* Week Box */
+.week {
+  grid-template-rows: 1fr 1fr;
+}
+
+.month__week {
+  font-size: 1.6em;
+}
+
+.total-week {
+  font-size: 3em;
+}
+
+/* TODO: think about better idea */
 #th_sun::before {
   content: "일요일";
 }
@@ -94,11 +158,6 @@ p {
   border-radius: 8px;
 }
 
-article > h1 {
-  font-family: 'Jua', sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
 
 #mmdd {
   margin-bottom: 20px;
