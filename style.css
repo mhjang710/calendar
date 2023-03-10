@@ -52,8 +52,9 @@ p {
   display: grid;
   grid-gap: 20px;
   grid-auto-flow: column;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template: 200px / repeat(4, 200px);
   justify-content: space-between;
+  min-width: 100%;
   width: 100%;
   font-family: 'Jua', sans-serif;
   text-align: center;
@@ -63,7 +64,8 @@ p {
 .info-wrapper section {
   border: 5px solid black;
   border-radius: 15px;
-  position: relative;
+  /* position: relative; */
+  max-width: 100%;
   width: 100%;
   font-weight: 900;
   display: grid;
@@ -93,6 +95,8 @@ p {
   place-items: center;
   font-size: 2em;
 }
+
+
 
 /* TODO: display AM or PM using .hide */
 
